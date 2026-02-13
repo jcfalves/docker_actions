@@ -23,11 +23,11 @@ jobs:
          distribution: 'adopt'
          cache: maven
      - name: Build Application Jar
-       working-directory: ./02-AfterDockerization/app
+       working-directory: ./apps/app
        run: mvn clean package
        
      - name: Docker Compose Build
-       working-directory: ./02-AfterDockerization
+       working-directory: ./apps
        run: docker compose build
 
      - name: Push to Docker Hub Container Registry
